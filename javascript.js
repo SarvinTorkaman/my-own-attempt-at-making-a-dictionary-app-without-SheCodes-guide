@@ -9,33 +9,16 @@ function handleResponse(response) {
     // console.log("hello");
     resultHtml = resultHtml + `<h3>${element.partOfSpeech}</h3>`;
     element.definitions.forEach((element) => {
-      resultHtml =
-        resultHtml +
-        `<p>${element.definition} <div> <em>${element.example}</em> </div></p>`;
+      resultHtml = resultHtml + `<p>${element.definition}</p> `;
+
+      if (element.example !== undefined) {
+        resultHtml = resultHtml + `<div> <em>${element.example}</em> </div>`;
+      }
+      resultHtml = resultHtml + `<hr>`;
     });
-    resultHtml = resultHtml + `<hr>`;
+
+    desplayResult.innerHTML = resultHtml;
   });
-
-  desplayResult.innerHTML = resultHtml;
-
-  //   `<h3>noun</h3>
-  //   <p>
-  //     ${response.data[0].meaning}
-  //   </p>
-  //   <div>
-  //     <em>a book of selected poems</em>
-  //   </div>
-  //   <p>a bound set of blank sheets for writing in.</p>
-  //   <div>
-  //     <em>an accounts book</em>
-  //   </div>
-  //   <p>
-  //     a set of tickets, stamps, matches, samples of cloth, etc., bound
-  //     together.
-  //   </p>
-  //   <div>
-  //     <em>a pattern book</em>
-  //   </div>`;
 }
 
 function handlesubmit(event) {
