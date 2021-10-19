@@ -14,9 +14,8 @@ function handleResponse(response) {
       if (element.example !== undefined) {
         resultHtml = resultHtml + `<div> <em>${element.example}</em> </div>`;
       }
-      resultHtml = resultHtml + `<hr>`;
     });
-
+    resultHtml = resultHtml + `<hr>`;
     desplayResult.innerHTML = resultHtml;
   });
 }
