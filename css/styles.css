@@ -5,12 +5,46 @@ body {
 
 h2 {
   text-align: center;
-  border: 2px solid grey;
-  border-radius: 5px;
-  margin: 40px 230px;
+  margin: 40px auto;
   line-height: 2cm;
+  border: 1.5px solid rgb(53, 58, 55);
+  border-radius: 4px;
 }
 .container {
   background-color: honeydew;
-  max-width: 800px;
+  max-width: 80%;
+}
+
+.btn-success {
+  max-width: 100px;
+  line-height: 1.5;
+  margin-left: 20px;
+}
+
+.input-box {
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+@media (max-width: 576px) {
+  .display {
+    text-align: left;
+  }
+
+  .input-box {
+    max-width: 100%;
+    margin: auto;
+  }
+  .btn-success {
+    max-width: 50%;
+    line-height: 1.5;
+
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 388px) {
+  h2 {
+    display: none;
+  }
 }
